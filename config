@@ -20,7 +20,7 @@ new_float   normal 3 px
 #hide_edge_borders both
 
 # autostart
-exec $psst feh --bg-scale ~/img/deathstar.png
+exec $psst feh --bg-scale ~/Downloads/the-dark-angel-wallpaper-hd.jpg
 exec $psst nm-applet
 exec $psst urxvtd -q -o -f
 exec $psst urxvtc
@@ -29,10 +29,10 @@ exec $psst xbacklight -set 33
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font pango: Inconsolata 10
-#font pango:DejaVu Sans Mono 8
-#font pango:Droid Sans, FontAwesome 9
-font pango:Source Code Pro for Powerline 10px
+#font pango: Inconsolata 10 bold
+#font pango:DejaVu Sans Mono 10 bold
+font pango:Droid Sans, FontAwesome 9 bold
+#font pango:Source Code Pro for Powerline 10px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -68,8 +68,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split horizontal/vertical
-bindsym $mod+minus      split v
-bindsym $mod+backslash  split h
+bindsym $sup+v  split v
+bindsym $sup+h  split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -92,16 +92,16 @@ bindsym $mod+a focus parent
 bindsym $mod+c focus child
 
 # define names for workspaces with some nice symbols
-set $w1 ❶
-set $w2 ❷
-set $w3 ❸
-set $w4 ❹
-set $w5 ❺
-set $w6 ❻
-set $w7 ❼
-set $w8 ❽
-set $w9 ❾
-set $w0 ❿
+set $w1 [ ❶ MAILS ]
+set $w2 [ ❷ SEARCH ]
+set $w3 [ ❸ CODE I ]
+set $w4 [ ❹ CODE II ]
+set $w5 [ ❺ CODE III ]
+set $w6 [ ❻ CODE IV ]
+set $w7 [ ❼ DATABASE ]
+set $w8 [ ❽ OTHERS ]
+set $w9 [ ❾ MUSIC ]
+set $w0 [ ❿ EXTENDED ]
 
 # switch to workspace
 bindsym $mod+1 workspace $w1
@@ -284,49 +284,49 @@ bindsym $mod+Super_L scratchpad show
 for_window [instance="rainlendar"] move scratchpad
 
 # My favorite programs
-bindsym $sup+a exec audacious
-bindsym $sup+b exec ~/develop/scripts/vbox-start.sh
-#bindsym $sup+c exec speedcrunch
-#bindsym $sup+c exec wine "C:\\Program Files (x86)\\analogx\\PCalc\\pcalc.exe"
-#bindsym $sup+c exec urxvtc -e sage floating enable; resize shrink width 120 px; resize shrink height 50 px
-bindsym $sup+c exec urxvtc -e sage
-#bindsym $sup+d
-bindsym $sup+e exec thunderbird
-bindsym $sup+f exec pcmanfm
-bindsym $sup+g exec gimp
-bindsym $sup+h exec rainlendar
-bindsym $sup+i exec inkscape
-#bindsym $sup+j
-bindsym $sup+k exec wireshark
-bindsym $sup+l exec libreoffice
-bindsym $sup+m exec mixxx
-#bindsym $sup+n
-#bindsym $sup+o
-#bindsym $sup+p exec "xrandr --output HDMI1 --auto && xrandr --output LVDS1 --off"
-#bindsym $sup+Shift+p exec "xrandr --output LVDS1 --auto"
-bindsym $sup+q exec qtcreator
-bindsym $sup+r exec urxvtc -e ranger --selectfile=`xcwd`
-bindsym $sup+s exec "rofi -snow -terminal urxvtc"
-bindsym $sup+t exec $psst ~/develop/scripts/start-teamviewer.sh
-#bindsym $sup+u exec $psst optirun uzbl-browser
-bindsym $sup+v exec vlc
-bindsym $sup+w exec chromium
-bindsym $sup+x exec keepassx
-bindsym $sup+y exec system-config-printer
-bindsym $sup+z exec filezilla
-bindsym $mod+Return exec urxvtc
-bindsym $mod+Shift+Return exec urxvtc --chdir `xcwd`
-#bindsym $mod+Shift+Return exec urxvtc --chdir ${PWD}
-bindsym $sup+1 exec "forticlientsslvpn_cli --server vpn.bbzsogr.ch:443 --vpnuser cyril.andreatta"
-#bindsym $sup+2 exec urxvtc
-#bindsym $sup+3
-#bindsym $sup+3
-#bindsym $sup+4
-#bindsym $sup+5
-#bindsym $sup+6
-#bindsym $sup+7
-#bindsym $sup+8
-#bindsym $sup+9
+## bindsym $sup+a exec audacious
+## bindsym $sup+b exec ~/develop/scripts/vbox-start.sh
+## #bindsym $sup+c exec speedcrunch
+## #bindsym $sup+c exec wine "C:\\Program Files (x86)\\analogx\\PCalc\\pcalc.exe"
+## #bindsym $sup+c exec urxvtc -e sage floating enable; resize shrink width 120 px; resize shrink height 50 px
+## bindsym $sup+c exec urxvtc -e sage
+## #bindsym $sup+d
+## bindsym $sup+e exec thunderbird
+## bindsym $sup+f exec pcmanfm
+## bindsym $sup+g exec gimp
+## bindsym $sup+h exec rainlendar
+## bindsym $sup+i exec inkscape
+## #bindsym $sup+j
+## bindsym $sup+k exec wireshark
+## bindsym $sup+l exec libreoffice
+## bindsym $sup+m exec mixxx
+## #bindsym $sup+n
+## #bindsym $sup+o
+## #bindsym $sup+p exec "xrandr --output HDMI1 --auto && xrandr --output LVDS1 --off"
+## #bindsym $sup+Shift+p exec "xrandr --output LVDS1 --auto"
+## bindsym $sup+q exec qtcreator
+## bindsym $sup+r exec urxvtc -e ranger --selectfile=`xcwd`
+## bindsym $sup+s exec "rofi -snow -terminal urxvtc"
+## bindsym $sup+t exec $psst ~/develop/scripts/start-teamviewer.sh
+## #bindsym $sup+u exec $psst optirun uzbl-browser
+## bindsym $sup+v exec vlc
+## bindsym $sup+w exec chromium
+## bindsym $sup+x exec keepassx
+## bindsym $sup+y exec system-config-printer
+## bindsym $sup+z exec filezilla
+## bindsym $mod+Return exec urxvtc
+## bindsym $mod+Shift+Return exec urxvtc --chdir `xcwd`
+## #bindsym $mod+Shift+Return exec urxvtc --chdir ${PWD}
+## bindsym $sup+1 exec "forticlientsslvpn_cli --server vpn.bbzsogr.ch:443 --vpnuser cyril.andreatta"
+## #bindsym $sup+2 exec urxvtc
+## #bindsym $sup+3
+## #bindsym $sup+3
+## #bindsym $sup+4
+## #bindsym $sup+5
+## #bindsym $sup+6
+## #bindsym $sup+7
+## #bindsym $sup+8
+## #bindsym $sup+9
 bindsym $sup+0 exec urxvtc, focus, floating enable
 bindsym $sup+Return exec terminator
 
